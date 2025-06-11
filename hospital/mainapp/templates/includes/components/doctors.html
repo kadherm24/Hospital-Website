@@ -1,0 +1,21 @@
+{% load static %}
+<div class="container mt-5 pt-5">
+    <h2 class="mb-4">Our Doctors</h2>
+    <div class="row">
+        {% for doctor in doctors %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                {% if doctor.image %}
+                <img src="{{ doctor.image.url }}" class="card-img-top" alt="Doctor Image">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ doctor.first_name.capitalize }} {{ doctor.last_name.capitalize }}</h5>
+                    <p class="card-text">{{ doctor.get_category_display }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No doctors found.</p>
+        {% endfor %}
+    </div>
+</div>
