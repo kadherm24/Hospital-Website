@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Add Doctor
+{% endblock %}
+
+
+{% block content %}
+
+<div class="adddoctor-container">
+    <h2>Add Doctor</h2>
+    <form method="post"  enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {% for field in form %}
+        <div class="row w-100 ">
+            <label for="{{field.name}}" class="col-4">{{field.name}}</label>
+            <div class="col-6">
+                {{field }}
+            </div>
+        </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary w-100 my-2" >Add Doctor</button>
+    </form>
+</div>
+{% endblock %}

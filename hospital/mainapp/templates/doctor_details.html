@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ doctor.name }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="{{doctor.image.url}}" alt="Image of {{ doctor.first_name.capitalize }} {{ doctor.last_name.capitalize }}" class=" w-100 round-edge"> 
+        </div>
+
+        <div class="col">
+            <h4>
+                {{ doctor.first_name.capitalize}} {{ doctor.last_name.capitalize}}
+            </h4>
+            <h6>
+                {{ doctor.category.capitalize}}
+            </h6>
+            
+    
+            <div class="w-100 mx-2 my-5 row justify-content-evenly">
+
+                
+                <a href="" class="btn btn-primary col-3">Book Appointment</a>
+                <a href="{% url 'edit_doc' doctor.id %}" class="btn btn-secondary col-3">Edit</a>
+                <a href="{% url 'del_doc' doctor.id %}" class="btn btn-danger col-3">Delete</a>
+                
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}

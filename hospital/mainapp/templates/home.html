@@ -5,5 +5,18 @@ Home
 {% endblock %}
 
 {% block content %}
-    {% include 'includes/components/doctors.html' %}
+<div class="container mt-5 pt-5">
+    <h2 class="mb-4">Our Doctors</h2>
+    <div class="row">
+
+        {% for doctor in doctors %}
+
+    {% include 'includes/components/doctorCard.html' %}
+
+    {% empty %}
+        <p>No doctors found.</p>
+        
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

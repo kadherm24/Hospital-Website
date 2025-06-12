@@ -23,3 +23,46 @@ body {
 
     }
 }
+
+.container{
+    .row{
+        .card{
+            height: 350px;
+            .card-img {
+                height: 80%;
+                overflow:hidden ;
+                
+                img { 
+                    object-position: 0px 0px;
+                    height: 100%;
+                    object-fit:cover;
+                }
+            }
+}
+}
+}
+
+
+main{
+    margin-top: 52px;
+        margin-bottom: 25px;
+
+   .signin-container, .signup-container, .adddoctor-container{
+        max-width: 500px;
+        margin: 150px auto;
+        padding: 30px;
+        border: 2px solid #4b3838;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+
+    
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: hsl(0, 27%, 24%);
+            } 
+        }}
+
