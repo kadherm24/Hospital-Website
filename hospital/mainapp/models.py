@@ -46,6 +46,13 @@ class Doctor(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     category = models.CharField(choices= CATEGORY_CHOICES, null=True )
+    
+    desc  = models.TextField(max_length=500, null=True)
+    qualification = models.CharField(max_length=50, null=True)
+    experience = models.IntegerField(null=True)
+    contact = models.CharField(max_length=50, null=True)
+
+    
 
 
     def __str__(self):

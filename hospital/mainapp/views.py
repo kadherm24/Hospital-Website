@@ -48,3 +48,13 @@ class DeleteDoctor(DeleteView):
     model = Doctor
     template_name = 'delete_doctor.html'
     success_url = '/'
+
+
+def specialities(request):
+    template = 'specialities.html'
+
+    context = {
+        'specs' : Doctor.CATEGORY_CHOICES
+    }
+
+    return render(request, template, context)

@@ -8,4 +8,7 @@ urlpatterns = [
     path('doctor/edit/<int:pk>', views.EditDoctor.as_view(), name = 'edit_doc'),
     path('doctor/del/<int:pk>', views.DeleteDoctor.as_view(), name = 'del_doc'),
 
+
+    path('categories/', views.specialities, name = 'specs')
+
 ]
