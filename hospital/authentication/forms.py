@@ -2,7 +2,7 @@
 from django.contrib.auth.models import User
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-
+from .models import Patient
 
 class CustomRegistrationForm(UserCreationForm):
     class Meta:
@@ -55,5 +55,10 @@ class CustomLoginForm(AuthenticationForm):
     )
 
 
+
+class AddPatientForm(forms.ModelForm):
+    class Meta:
+        model = Patient
+        exclude = ['user']
 
 

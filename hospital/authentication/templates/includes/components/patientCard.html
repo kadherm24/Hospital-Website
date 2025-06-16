@@ -1,0 +1,34 @@
+{% load static %}
+
+    
+        <div class="col-md-3 mb-4">
+        
+            <div class="card">
+                
+                <div class="card-img">
+                    <a href="">
+                        <img src="{{ patient.image.url }}" class="card-img-top" alt="Doctor Image">
+                     </a>
+                </div>
+                
+                
+                
+                <div class="card-body row align-items-center">
+                    <div class="col">
+                       <a href="" class="text-decoration-none">
+                            <h6 class="card-title">{{ patient.full_name.capitalize }}</h6>
+                        </a>
+                    <p class="card-text">{{ patient.get_gender_display }}</p>
+
+                    </div>
+         
+                    <div class="col .fs-6 text">
+                        <a href="#" class="btn btn-danger btn-sm ">View Details</a>
+                
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
