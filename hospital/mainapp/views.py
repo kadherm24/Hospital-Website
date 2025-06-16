@@ -67,3 +67,13 @@ def carousel(request):
     template = 'carousel.html'
     return render(request, template, context) # this renders the response according to the request using the context
 
+def AboutUs(request):
+    about = Doctor.objects.all()
+    template = 'about.html'
+
+    context = {
+        'about' : 'about'
+    }
+
+    return render(request, template, context)
+

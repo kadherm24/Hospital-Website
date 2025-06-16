@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;" data-bs-theme="light">
   <div class="container-fluid">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{% url 'homepage' %}">
         <img src="static\images\logos\KM_logo.png" width="40" height="34" alt="logo">
     </a>
-    <a class="navbar-brand" href="#">KM Hospitals</a>
+    <a class="navbar-brand" href="{% url 'homepage' %}">KM Hospitals</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,7 +13,7 @@
           <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'aboutus' %}">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'specs' %}">Specialities</a>

@@ -10,6 +10,7 @@ urlpatterns = [
 
 
     path('categories/', views.specialities, name = 'specs'),
-    path('carousel/', views.carousel, name='caros')
+    path('carousel/', views.carousel, name='caros'),
+    path('aboutus/', views.AboutUs, name='aboutus')
 
 ]
