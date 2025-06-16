@@ -66,3 +66,25 @@ main{
             } 
         }}
 
+
+main{
+    #carouselExampleAutoplaying {
+        height: 600px;
+
+        .carousel-inner{
+            height: 100%;
+            .carousel-item{
+                height: 100%;
+
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+
+
+

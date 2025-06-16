@@ -9,6 +9,7 @@ urlpatterns = [
     path('doctor/del/<int:pk>', views.DeleteDoctor.as_view(), name = 'del_doc'),
 
 
-    path('categories/', views.specialities, name = 'specs')
+    path('categories/', views.specialities, name = 'specs'),
+    path('carousel/', views.carousel, name='caros')
 
 ]

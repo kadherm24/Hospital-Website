@@ -58,3 +58,12 @@ def specialities(request):
     }
 
     return render(request, template, context)
+
+def carousel(request):
+    caros = Doctor.objects.all() # SELECT * FROM mainapp_doctor;
+    context = {
+        'carousels' : caros
+    }
+    template = 'carousel.html'
+    return render(request, template, context) # this renders the response according to the request using the context
+
