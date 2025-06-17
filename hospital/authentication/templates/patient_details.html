@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ patient.name }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid d-flex justify-content-center my-4">
+    <div class="doctor-card shadow p-4 rounded w-75 bg-white">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ patient.image.url }}" alt="Image of {{ patient.full_name.capitalize }}" class="w-100 rounded">
+            </div>
+
+            <div class="col-md-8">
+                <h4>{{ patient.full_name.capitalize }}</h4>
+                <h6>{{ patient.gender.capitalize }}</h6>
+
+                <p><b>Age:</b>{{ patient.age }}</p>
+                <p><b>Contact Number:</b> {{ patient.phone }} </p>
+                <p><b>Relationship:</b> {{ patient.relation_type }}</p>
+                
+
+                <div class="row justify-content-evenly mt-4">
+                    
+                        <a href="{% url 'edit_patient' patient.id %}" class="btn btn-secondary col-3">Edit</a>
+                        <a href="{% url 'del_patient' patient.id %}" class="btn btn-danger col-3">Delete</a>
+                    
+                        <a href="#" class="btn btn-primary col-4">Book Appointment</a>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

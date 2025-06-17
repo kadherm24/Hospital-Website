@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5 pt-5">
+    <h2 class="mb-4">My Patients</h2>
+    <div class="row">
+
+    {% for patient in patients %}
+    {% include 'includes/components/patientCard.html' %}
+
+    {% empty %}
+        <p>No Patients found.</p>
+        
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

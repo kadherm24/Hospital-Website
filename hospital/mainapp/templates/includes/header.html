@@ -47,8 +47,8 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'addpatient' %}">Add Patient</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="">My Patients</a>
+              <li class="nav-item">               
+                <a class="nav-link active" aria-current="page" href="{% url 'patientview' %}">My Patients</a>
               </li>
               {% endif %}
         {% endif %}
